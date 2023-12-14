@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= course.title %> - Course Details</title>
+    <!-- Include Bootstrap CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <a href="/" class="btn btn-secondary position-absolute top-0 ml-3 mt-3">Back to Home Page</a>
+    <div class="container mt-4">
+        <div class="row">
+            <div>
+                <!-- Course Thumbnail -->
+                <!-- Course Title -->
+                <div class="text-center">
+                    <h1><%= course.Title %></h1>
+                    <img src="/images/<%= course.Thumbnail %>" alt="<%= course.Title %>" class="img-thumbnail">
+                    
+                </div>
+                <!-- Course Details -->
+                <ul class="list-group">
+                    <li class="list-group-item"><strong>Category:</strong> <%= course.Category %></li>
+                    <li class="list-group-item"><strong>Mode:</strong> <%= course.Mode %></li>
+                    <li class="list-group-item"><strong>Date:</strong> <%= course.Date %></li>
+                    <li class="list-group-item"><strong>Location:</strong> <%= course.Location %></li>
+                    <li class="list-group-item"><strong>Cost:</strong> <%= course.Cost %></li>
+                    <li class="list-group-item"><strong>Facilities:</strong> <%= course.Facilities %></li>
+                    <li class="list-group-item"><strong>Organizer:</strong> <%= course.organizer %></li>
+                </ul>
+                <!-- Course Description -->
+                <style>
+                    .justified-text {
+                        text-align: justify;
+                        white-space: pre-wrap;
+                    }
+                </style>
+                <h3 class="mt-4">Description</h3>
+                <pre class="justified-text"><%= course.Description %></pre>
+                <!-- Register Now Button -->
+                <a href="/register" class="btn btn-primary">Register Now</a>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Include Bootstrap JS and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

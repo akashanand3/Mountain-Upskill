@@ -1,0 +1,25 @@
+<!-- views/courses.ejs -->
+<%- include("header") -%>
+<body>
+  <div class="container">
+    <h1 class="mt-4 mb-4"><%= heading %></h1>
+    <div class="row">
+      <% courselist.forEach(course => { %>
+        <div class="col-md-4 mb-4">
+          <div class="card">
+            <img src="/images/<%= course.Thumbnail || course.Image %>" class="card-img-top" alt="<%= course.Title %> Image">
+            <div class="card-body" style="height: 100px;">
+              <a href="/courses/<%= course._id %>">
+                <h5 class="card-title"><%= course.Title %></h5>
+              </a>
+              <p class="card-text">Location: <%= course.Location %></p>
+                  <!-- Link to the course description page -->
+              <!-- <a href="/courses/<%= course._id %>">Learn more</a> -->
+              <!-- Add more course details as needed -->
+            </div>
+          </div>
+        </div>
+      <% }); %>
+    </div>
+  </div>
+<%- include("footer") -%>
